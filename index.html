@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.171a766f.css">
-<script src="/assets/js/runtime~main.b9f75a16.js" defer="defer"></script>
-<script src="/assets/js/main.2a59c46d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b15f9438.js" defer="defer"></script>
+<script src="/assets/js/main.f0e8099a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -35,6 +35,14 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-this-project-adds">Ce que ce projet ajoute<a href="#what-this-project-adds" class="hash-link" aria-label="Lien direct vers Ce que ce projet ajoute" title="Lien direct vers Ce que ce projet ajoute" translate="no">​</a></h2>
 <p>La <a href="https://github.com/Qiskit/documentation" target="_blank" rel="noopener noreferrer" class="">documentation Qiskit</a> d&#x27;IBM est open-source (CC BY-SA 4.0), mais leur application web ne l&#x27;est pas. doQumentation ajoute une interface open-source avec exécution de code en direct, injection automatique des identifiants, et mode simulateur.</p>
 <p>Déployable partout — de <a href="https://doqumentation.org" target="_blank" rel="noopener noreferrer" class="">GitHub Pages</a> à <a href="https://github.com/JanLahmann/doQumentation/pkgs/container/doqumentation" target="_blank" rel="noopener noreferrer" class="">Docker</a> en passant par <a href="https://rasqberry.org/" target="_blank" rel="noopener noreferrer" class="">RasQberry</a>. Découvrez <a class="" href="/features">toutes les fonctionnalités</a>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="when-youre-ready-for-more">Quand tu es prêt pour la suite<a href="#when-youre-ready-for-more" class="hash-link" aria-label="Lien direct vers Quand tu es prêt pour la suite" title="Lien direct vers Quand tu es prêt pour la suite" translate="no">​</a></h2>
+<p>doQumentation t&#x27;aide à faire tes <strong>premiers pas avec Qiskit</strong> — lire, exécuter du code, et explorer — sans rien avoir à installer. Quand tu veux aller plus loin, dirige-toi vers la plateforme officielle d&#x27;IBM :</p>
+<ul>
+<li class=""><strong>Exécuter sur du vrai matériel</strong> — crée un <a href="https://quantum.cloud.ibm.com/registration" target="_blank" rel="noopener noreferrer" class="">compte IBM Cloud</a> gratuit et une instance Open Plan pour exécuter des circuits sur de vrais ordinateurs quantiques.</li>
+<li class=""><strong>Contenu le plus récent</strong> — la <a href="https://quantum.cloud.ibm.com/learning" target="_blank" rel="noopener noreferrer" class="">plateforme d&#x27;apprentissage Qiskit</a> d&#x27;IBM propose les cours, tutoriels et ajouts les plus récents (certains peuvent ne pas encore être dans doQumentation).</li>
+<li class=""><strong>Développer localement</strong> — <a href="https://docs.quantum.ibm.com/guides/install-qiskit" target="_blank" rel="noopener noreferrer" class="">installe Qiskit</a> sur ton propre ordinateur portable pour un travail de développement sérieux.</li>
+</ul>
+<p><em>Construit sur la <a href="https://github.com/Qiskit/documentation" target="_blank" rel="noopener noreferrer" class="">documentation open source d&#x27;IBM Quantum</a>. Merci à l&#x27;équipe IBM Quantum de rendre ce contenu librement disponible sous licence CC BY-SA 4.0.</em></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="getting-started">Pour commencer<a href="#getting-started" class="hash-link" aria-label="Lien direct vers Pour commencer" title="Lien direct vers Pour commencer" translate="no">​</a></h2>
 <!-- -->
 <!-- -->
@@ -57,7 +65,7 @@
 <li class=""><strong>IBM Code Engine</strong> — Jupyter serverless sur votre compte IBM Cloud. Démarrage à froid en secondes au lieu de minutes. <a class="" href="/jupyter-settings#code-engine">Configurer</a></li>
 <li class=""><strong>Jupyter local (Docker / RasQberry)</strong> — Se connecte au serveur Jupyter local avec Qiskit pré-installé</li>
 <li class=""><strong>Serveur personnalisé</strong> — Pointez vers n&#x27;importe quel point de terminaison Jupyter dans les <a class="" href="/jupyter-settings#advanced">Paramètres</a></li>
-</ol><p>Lorsque plusieurs backends sont disponibles, choisissez lequel utiliser depuis les <a class="" href="/jupyter-settings#backend-selection">Paramètres</a>.</p></div></div></details>
+</ol><p><strong>No IBM Quantum account?</strong> Enable <a href="/jupyter-settings#execution-mode">Simulator Mode</a> in Settings to run all code without signing up.</p><p>Lorsque plusieurs backends sont disponibles, choisissez lequel utiliser depuis les <a class="" href="/jupyter-settings#backend-selection">Paramètres</a>.</p></div></div></details>
 <details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Options de déploiement</summary><div><div class="collapsibleContent_i85q"><p>doQumentation est disponible sous forme de :</p><ul>
 <li class=""><strong><a href="https://doqumentation.org" target="_blank" rel="noopener noreferrer" class="">GitHub Pages</a></strong> — Site statique avec <a href="https://mybinder.org" target="_blank" rel="noopener noreferrer" class="">Binder</a> ou <a class="" href="/jupyter-settings#code-engine">IBM Code Engine</a> pour l&#x27;exécution de code à distance</li>
 <li class=""><strong><a href="https://github.com/JanLahmann/doQumentation/pkgs/container/doqumentation" target="_blank" rel="noopener noreferrer" class="">Docker</a></strong> — Stack complète localement, capable de fonctionner hors ligne</li>

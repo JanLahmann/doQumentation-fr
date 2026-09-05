@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.70f84384.js" defer="defer"></script>
-<script src="/assets/js/main.85882952.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.da658a57.js" defer="defer"></script>
+<script src="/assets/js/main.865f0859.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/about/code-modifications" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/about/code-modifications" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -37,13 +37,17 @@ a ajouté une cellule de configuration automatique. Elle renvoie vers cette page
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-prerequisites-cell-code">2. Cellule de prérequis (code)<a href="#2-prerequisites-cell-code" class="hash-link" aria-label="Lien direct vers 2. Cellule de prérequis (code)" title="Lien direct vers 2. Cellule de prérequis (code)" translate="no">​</a></h3>
 <p>Une cellule de code est insérée après l&#x27;avis et elle :</p>
 <ul>
-<li class=""><strong>Installe les paquets requis</strong> (<code>qiskit</code>, <code>qiskit-aer</code>, <code>qiskit-ibm-runtime</code>,
+<li class="">
+<p><strong>Installe les paquets requis</strong> (<code>qiskit</code>, <code>qiskit-aer</code>, <code>qiskit-ibm-runtime</code>,
 <code>pylatexenc</code>, ainsi que tout paquet spécifique au tutoriel détecté par analyse
 des imports). L&#x27;installation est <strong>ignorée</strong> si les paquets sont déjà présents
-(par exemple sur Binder ou Code Engine où ils sont pré-installés).</li>
-<li class=""><strong>Fournit un modèle de credentials commenté</strong> pour IBM Quantum, afin que les
+(par exemple sur Binder ou Code Engine où ils sont pré-installés).</p>
+</li>
+<li class="">
+<p><strong>Fournit un modèle de credentials commenté</strong> pour IBM Quantum, afin que les
 utilisateurs qui souhaitent exécuter sur du vrai matériel puissent décommenter
-et renseigner leur clé API.</li>
+et renseigner leur clé API.</p>
+</li>
 </ul>
 <p>Sur Google Colab, cette cellule s&#x27;exécute automatiquement à l&#x27;ouverture du
 notebook via le flag de métadonnées <code>cell_execution_strategy: setup</code>.</p>
@@ -55,28 +59,44 @@ autonomes.</p>
 <p>Les tutoriels affichés sur ce site sont convertis depuis des notebooks <code>.ipynb</code>
 ou des fichiers <code>.mdx</code> en amont. Les transformations suivantes sont appliquées :</p>
 <ul>
-<li class=""><strong>Les lignes <code>pip install</code></strong> sont ajoutées aux blocs de code Python qui importent
-des paquets tiers, permettant une exécution en un clic via thebelab.</li>
-<li class=""><strong>Section IBM Tutorial Survey</strong> : une note est ajoutée pour préciser que le
+<li class="">
+<p><strong>Les lignes <code>pip install</code></strong> sont ajoutées aux blocs de code Python qui importent
+des paquets tiers, permettant une exécution en un clic via thebelab.</p>
+</li>
+<li class="">
+<p><strong>Section IBM Tutorial Survey</strong> : une note est ajoutée pour préciser que le
 sondage appartient à IBM Quantum et pour renvoyer vers les Issues GitHub de
-doQumentation pour les retours spécifiques au site.</li>
-<li class=""><strong>Widget de retour</strong> : un widget &quot;Was this helpful?&quot; est ajouté en bas de chaque
-tutoriel, suivi via les analytics Umami respectueux de la vie privée.</li>
-<li class=""><strong>Corrections de syntaxe MDX</strong> : les accolades, la hiérarchie des titres et les
+doQumentation pour les retours spécifiques au site.</p>
+</li>
+<li class="">
+<p><strong>Widget de retour</strong> : un widget &quot;Was this helpful?&quot; est ajouté en bas de chaque
+tutoriel, suivi via les analytics Umami respectueux de la vie privée.</p>
+</li>
+<li class="">
+<p><strong>Corrections de syntaxe MDX</strong> : les accolades, la hiérarchie des titres et les
 problèmes de compatibilité JSX sont automatiquement corrigés pour le rendu
-Docusaurus.</li>
-<li class=""><strong>OpenInLabBanner</strong> : une bannière interactive est injectée sous le titre avec
-des boutons pour ouvrir le notebook dans Colab, Binder ou Code Engine.</li>
+Docusaurus.</p>
+</li>
+<li class="">
+<p><strong>OpenInLabBanner</strong> : une bannière interactive est injectée sous le titre avec
+des boutons pour ouvrir le notebook dans Colab, Binder ou Code Engine.</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-not-modified">Ce qui n&#x27;est PAS modifié<a href="#what-is-not-modified" class="hash-link" aria-label="Lien direct vers Ce qui n&#x27;est PAS modifié" title="Lien direct vers Ce qui n&#x27;est PAS modifié" translate="no">​</a></h2>
 <ul>
-<li class="">Le <strong>contenu du tutoriel lui-même</strong> (explications, logique du code, résultats)
-n&#x27;est jamais altéré.</li>
-<li class=""><strong>L&#x27;attribution aux auteurs originaux</strong> est préservée via le frontmatter et le
-fichier NOTICE (licences Apache 2.0 / CC BY-SA 4.0).</li>
-<li class=""><strong>Aucun code de télémétrie ou de suivi</strong> n&#x27;est injecté dans les notebooks.
+<li class="">
+<p>Le <strong>contenu du tutoriel lui-même</strong> (explications, logique du code, résultats)
+n&#x27;est jamais altéré.</p>
+</li>
+<li class="">
+<p><strong>L&#x27;attribution aux auteurs originaux</strong> est préservée via le frontmatter et le
+fichier NOTICE (licences Apache 2.0 / CC BY-SA 4.0).</p>
+</li>
+<li class="">
+<p><strong>Aucun code de télémétrie ou de suivi</strong> n&#x27;est injecté dans les notebooks.
 Les analytics (Umami) ne s&#x27;exécutent que sur le site doQumentation, pas dans
-les notebooks exportés.</li>
+les notebooks exportés.</p>
+</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="source-code">Code source<a href="#source-code" class="hash-link" aria-label="Lien direct vers Code source" title="Lien direct vers Code source" translate="no">​</a></h2>
 <p>Toutes les transformations sont implémentées dans

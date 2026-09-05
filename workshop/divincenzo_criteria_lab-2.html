@@ -15,8 +15,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.e55021e4.css">
-<script src="/assets/js/runtime~main.70f84384.js" defer="defer"></script>
-<script src="/assets/js/main.85882952.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.da658a57.js" defer="defer"></script>
+<script src="/assets/js/main.865f0859.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="swg" href="https://swg.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bad.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="bar" href="https://bar.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="ksh" href="https://ksh.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="nds" href="https://nds.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="gsw" href="https://gsw.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://sax.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://bln.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="de-AT" href="https://aut.doqumentation.org/workshop/divincenzo_criteria_lab-2" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/workshop/divincenzo_criteria_lab-2" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -28,11 +28,21 @@
 <p>Le physicien David DiVincenzo a défini cinq exigences clés pour toute implémentation physique d&#x27;un ordinateur quantique, ainsi que deux critères supplémentaires pour la communication quantique. Dans ce notebook, nous allons <strong>découvrir chaque critère de DiVincenzo à travers des démonstrations pratiques avec Qiskit</strong>. Plutôt que d&#x27;approfondir la théorie, chaque section explique brièvement un critère puis propose des exercices de code avec Qiskit 2. Tu pourras exécuter des circuits sur des simulateurs et de vrais appareils IBM Quantum pour <strong>explorer chaque principe de façon concrète</strong>.</p>
 <p><strong>Les cinq critères de DiVincenzo pour le calcul quantique</strong> :</p>
 <ol>
-<li class=""><strong>Un système physique évolutif avec des qubits bien caractérisés.</strong></li>
-<li class=""><strong>Capacité d&#x27;initialiser les qubits</strong> dans un état fiduciel simple (par ex. |00…0〉).</li>
-<li class=""><strong>Des temps de décohérence longs</strong> (la cohérence du qubit doit être bien supérieure au temps d&#x27;opération d&#x27;une Gate).</li>
-<li class=""><strong>Un ensemble universel de portes quantiques</strong> (capable d&#x27;effectuer des opérations unitaires arbitraires).</li>
-<li class=""><strong>Capacité de mesure spécifique à chaque qubit</strong> (lire l&#x27;état de chaque qubit).</li>
+<li class="">
+<p><strong>Un système physique évolutif avec des qubits bien caractérisés.</strong></p>
+</li>
+<li class="">
+<p><strong>Capacité d&#x27;initialiser les qubits</strong> dans un état fiduciel simple (par ex. |00…0〉).</p>
+</li>
+<li class="">
+<p><strong>Des temps de décohérence longs</strong> (la cohérence du qubit doit être bien supérieure au temps d&#x27;opération d&#x27;une Gate).</p>
+</li>
+<li class="">
+<p><strong>Un ensemble universel de portes quantiques</strong> (capable d&#x27;effectuer des opérations unitaires arbitraires).</p>
+</li>
+<li class="">
+<p><strong>Capacité de mesure spécifique à chaque qubit</strong> (lire l&#x27;état de chaque qubit).</p>
+</li>
 </ol>
 <p><em>(DiVincenzo a également décrit deux critères pour la communication quantique : la capacité d&#x27;interconvertir des qubits stationnaires et des qubits « volants », et de transmettre fidèlement des qubits volants entre différents endroits. Nous les abordons dans une activité recommandée à la fin de ce notebook.)</em></p>
 <p>Chacune des sections suivantes correspond à un critère. Nous utiliserons Qiskit pour illustrer le concept avec du code et des <strong>expériences interactives</strong> que tu peux essayer. Par exemple, nous verrons comment l&#x27;augmentation du nombre de qubits et de la profondeur du circuit affecte les résultats (Critère 1), comment réinitialiser et préparer des états de qubit (Critère 2), comment mesurer des qubits sur des simulateurs par rapport à des appareils réels (Critère 4), comment Qiskit compose des portes universelles (Critère 3), et comment la cohérence finie (T₁, T₂) impacte les calculs (Critère 5). À la fin, tu auras une intuition plus profonde de ce que signifie chaque critère de DiVincenzo en pratique et comment Qiskit permet de les expérimenter.</p>
@@ -149,8 +159,12 @@ Tu devrais observer que la probabilité <code>P(qubit=1)</code> diminue à mesur
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-communication-criteria-flying-qubits">Critères de Communication Quantique (qubits Volants)<a href="#quantum-communication-criteria-flying-qubits" class="hash-link" aria-label="Lien direct vers Critères de Communication Quantique (qubits Volants)" title="Lien direct vers Critères de Communication Quantique (qubits Volants)" translate="no">​</a></h2>
 <p>DiVincenzo a également listé deux critères spécifiques à la communication quantique, importants pour la construction d&#x27;un ordinateur quantique en réseau :</p>
 <ol start="6">
-<li class=""><strong>Capacité à interconvertir les qubits stationnaires et volants.</strong> (Par exemple, mapper un qubit dans un processeur vers un photon capable de voyager.)</li>
-<li class=""><strong>Capacité à transmettre fidèlement des qubits volants entre des emplacements.</strong> (Par exemple, envoyer un qubit photonique à travers une fibre sans perdre l&#x27;information quantique.)</li>
+<li class="">
+<p><strong>Capacité à interconvertir les qubits stationnaires et volants.</strong> (Par exemple, mapper un qubit dans un processeur vers un photon capable de voyager.)</p>
+</li>
+<li class="">
+<p><strong>Capacité à transmettre fidèlement des qubits volants entre des emplacements.</strong> (Par exemple, envoyer un qubit photonique à travers une fibre sans perdre l&#x27;information quantique.)</p>
+</li>
 </ol>
 <p>Ces aspects dépassent l&#x27;utilisation standard de Qiskit car Qiskit traite principalement des qubits stationnaires sur une puce. Cependant, nous pouvons illustrer le <em>concept</em> de ces critères avec un exemple simple : la <strong>téléportation quantique</strong>. La téléportation montre comment l&#x27;état d&#x27;un qubit stationnaire est converti en information transportée par une paire intriquée (la partie « volante ») et par la communication classique, qui est ensuite utilisée pour reconstruire l&#x27;état sur un autre qubit stationnaire ailleurs.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module">Activité recommandée : Suivre le module <em>Quantum Teleportation</em> de Qiskit in Classrooms<a href="#recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" class="hash-link" aria-label="Lien direct vers recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" title="Lien direct vers recommended-activity-take-the-qiskit-in-classrooms-quantum-teleportation-module" translate="no">​</a></h3>
@@ -160,11 +174,21 @@ Tu devrais observer que la probabilité <code>P(qubit=1)</code> diminue à mesur
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion-summary">Conclusion &amp; Résumé<a href="#conclusion-summary" class="hash-link" aria-label="Lien direct vers Conclusion &amp; Résumé" title="Lien direct vers Conclusion &amp; Résumé" translate="no">​</a></h2>
 <p>Nous avons conçu une série d&#x27;exercices axés sur le code pour illustrer les critères de DiVincenzo en utilisant Qiskit. À travers ces exemples pratiques, tu as exploré comment une vraie plateforme de calcul quantique satisfait chaque exigence :</p>
 <ul>
-<li class=""><strong>Évolutivité</strong> : construire des circuits sur plus de qubits et comprendre la mise à l&#x27;échelle du bruit.</li>
-<li class=""><strong>Initialisation</strong> : utiliser les réinitialisations et la préparation d&#x27;états pour démarrer de manière fiable les calculs dans des états connus.</li>
-<li class=""><strong>Gates Universelles</strong> : transcompiler des opérations complexes vers les portes de base d&#x27;une machine, prouvant que nous pouvons effectuer n&#x27;importe quel calcul.</li>
-<li class=""><strong>Mesure</strong> : lire les qubits et gérer les erreurs de lecture réalistes.</li>
-<li class=""><strong>Cohérence</strong> : voir l&#x27;effet des T₁, T₂ finis sur la fidélité des algorithmes et la nécessité que les opérations soient rapides par rapport à la décohérence.</li>
+<li class="">
+<p><strong>Évolutivité</strong> : construire des circuits sur plus de qubits et comprendre la mise à l&#x27;échelle du bruit.</p>
+</li>
+<li class="">
+<p><strong>Initialisation</strong> : utiliser les réinitialisations et la préparation d&#x27;états pour démarrer de manière fiable les calculs dans des états connus.</p>
+</li>
+<li class="">
+<p><strong>Gates Universelles</strong> : transcompiler des opérations complexes vers les portes de base d&#x27;une machine, prouvant que nous pouvons effectuer n&#x27;importe quel calcul.</p>
+</li>
+<li class="">
+<p><strong>Mesure</strong> : lire les qubits et gérer les erreurs de lecture réalistes.</p>
+</li>
+<li class="">
+<p><strong>Cohérence</strong> : voir l&#x27;effet des T₁, T₂ finis sur la fidélité des algorithmes et la nécessité que les opérations soient rapides par rapport à la décohérence.</p>
+</li>
 </ul>
 <p>Pour être complet, nous avons également abordé les aspects de la communication quantique via le module <a href="https://quantum.cloud.ibm.com/learning/en/modules/computer-science/quantum-teleportation" target="_blank" rel="noopener noreferrer" class="">Quantum Teleportation</a> de Qiskit in Classrooms, reliant les deux derniers critères (qubits volants).</p>
 <p>Enfin, il convient de noter comment ces critères se rejoignent dans un vrai ordinateur quantique comme celui d&#x27;IBM. Un dispositif comme <strong>ibmq_brisbane</strong> a 127 qubits supraconducteurs (Critère 1), chacun démarrant en |0〉 (Critère 2), avec un ensemble de portes calibré et des compilateurs pour l&#x27;universalité (Critère 4), des résonateurs de lecture micro-ondes pour chaque qubit (Critère 5), et des temps de cohérence de l&#x27;ordre de centaines de microsecondes contre des opérations en nanosecondes (Critère 3). Pour les expériences de réseaux quantiques, IBM et d&#x27;autres explorent la transduction micro-onde vers optique pour les qubits volants, et l&#x27;intrication de qubits distants (Critères 6 &amp; 7) ; ce sont des domaines de recherche actifs.</p>

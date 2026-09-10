@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.4d321d49.js" defer="defer"></script>
-<script src="/assets/js/main.792011e9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b6362e7b.js" defer="defer"></script>
+<script src="/assets/js/main.944ab57e.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/tutorials/chsh-inequality" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/tutorials/chsh-inequality" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -29,25 +29,25 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-outcomes">Objectifs d&#x27;apprentissage<a href="#learning-outcomes" class="hash-link" aria-label="Lien direct vers Objectifs d&#x27;apprentissage" title="Lien direct vers Objectifs d&#x27;apprentissage" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p>How to construct a parameterized Bell-state CHSH circuit and measure the four expectation values that make up the CHSH witnesses.</p>
+<p>Comment construire un Circuit CHSH à état de Bell paramétré et mesurer les quatre valeurs d&#x27;espérance qui constituent les témoins CHSH.</p>
 </li>
 <li class="">
-<p>How to compute expectation values of multiple observables on a parameter sweep in a single call to the <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/estimator-v2" target="_blank" rel="noopener noreferrer" class=""><code>EstimatorV2</code></a> primitive.</p>
+<p>Comment calculer les valeurs d&#x27;espérance de plusieurs observables sur un balayage de paramètres en un seul appel à la primitive <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/estimator-v2" target="_blank" rel="noopener noreferrer" class=""><code>EstimatorV2</code></a>.</p>
 </li>
 <li class="">
-<p>How to validate a quantum workflow on a noisy local simulator with <code>AerSimulator.from_backend</code> before submitting to hardware.</p>
+<p>Comment valider un flux de travail quantique sur un simulateur local bruité avec <code>AerSimulator.from_backend</code> avant de soumettre à du matériel réel.</p>
 </li>
 <li class="">
-<p>How to scale a CHSH experiment into a device-wide entanglement benchmark by running many independent Bell pairs in parallel on IBM Quantum® hardware.</p>
+<p>Comment transformer une expérience CHSH en un benchmark d&#x27;intrication à l&#x27;échelle d&#x27;un dispositif en exécutant de nombreuses paires de Bell indépendantes en parallèle sur du matériel IBM Quantum®.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="prerequisites">Prérequis<a href="#prerequisites" class="hash-link" aria-label="Lien direct vers Prérequis" title="Lien direct vers Prérequis" translate="no">​</a></h2>
 <ul>
 <li class="">
-<p><a class="" href="/learning/courses/basics-of-quantum-information/entanglement-in-action/chsh-game">Entanglement in action</a>, a course lesson on Bell states and the CHSH game.</p>
+<p><a class="" href="/learning/courses/basics-of-quantum-information/entanglement-in-action/chsh-game">L&#x27;intrication en action</a>, une leçon de cours sur les états de Bell et le jeu CHSH.</p>
 </li>
 <li class="">
-<p><a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.quantum_info.SparsePauliOp" target="_blank" rel="noopener noreferrer" class=""><code>SparsePauliOp</code></a> and the Qiskit primitives <a class="" href="/guides/primitives">introduction</a>.</p>
+<p><a href="https://docs.quantum.ibm.com/api/qiskit/qiskit.quantum_info.SparsePauliOp" target="_blank" rel="noopener noreferrer" class=""><code>SparsePauliOp</code></a> et l&#x27;<a class="" href="/guides/primitives">introduction</a> aux primitives Qiskit.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="background">Contexte<a href="#background" class="hash-link" aria-label="Lien direct vers Contexte" title="Lien direct vers Contexte" translate="no">​</a></h2>

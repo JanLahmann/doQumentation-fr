@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.46f92fcb.js" defer="defer"></script>
-<script src="/assets/js/main.c0f12266.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.aefb05ae.js" defer="defer"></script>
+<script src="/assets/js/main.104662ee.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qasm-feature-table" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -25,7 +25,7 @@
 <!-- -->
 <header><h1>Tableau des fonctionnalités OpenQASM 3</h1></header>
 <p>Voici la liste des fonctionnalités du langage <code>OpenQASM 3</code>.</p>
-<p>Pour plus de détails sur ces capacités, consulte la <a href="https://openqasm.com/" target="_blank" rel="noopener noreferrer" class="">spécification live OpenQASM 3.X</a>.</p>
+<p>Pour plus de détails sur ces capacités, consulte la <a href="https://openqasm.com/" target="_blank" rel="noopener noreferrer" class="">spécification évolutive OpenQASM 3.X</a>.</p>
 <p>Légende :</p>
 <ul>
 <li class="">
@@ -59,7 +59,7 @@ Cela inclut les fonctionnalités qui ne peuvent pas être chargées par Qiskit S
 <li class="">Ces fonctionnalités de programme OpenQASM 3 n&#x27;ont aucun impact sur l&#x27;exécution et Qiskit les supprime
 lors de l&#x27;analyse des fichiers. Les fichiers qui les utilisent peuvent être soumis, mais ils n&#x27;auront
 aucun effet. Pour les fichiers <code>include</code>, <code>stdgates.inc</code> est actuellement pris en charge en entrée par Qiskit,
-et l&#x27;exécution sur le backend requiert toujours que les circuits aient été compilés vers l&#x27;Architecture du Jeu d&#x27;Instructions (ISA) du backend, où
+et l&#x27;exécution sur le backend requiert toujours que les circuits aient été compilés vers l&#x27;architecture du jeu d&#x27;instructions (ISA) du backend, où
 les fichiers <code>include</code> sont sans objet.</li>
 </ol>
 <span id="2"></span>
@@ -76,10 +76,10 @@ si le circuit a été transpilé pour un backend avec des informations de dispos
 </ol>
 <span id="4"></span>
 <ol start="4">
-<li class="">Depuis juillet 2025, Qiskit SDK peut représenter des variables locales d&#x27;un ensemble restreint de types,
+<li class="">En date de juillet 2025, Qiskit SDK peut représenter des variables locales d&#x27;un ensemble restreint de types,
 représenter de nombreuses opérations à l&#x27;exécution sur ces objets, et prend en charge leur export vers OpenQASM 3.
 Cependant, Qiskit SDK (via <code>qiskit-qasm3-import</code> v0.6.0) ne prend pas en charge l&#x27;analyse des fichiers OpenQASM 3
-contenant des déclarations de variables, et dispose d&#x27;un support très limité pour l&#x27;analyse des expressions de variables.
+contenant des déclarations de variables, et n&#x27;offre qu&#x27;une prise en charge très limitée de l&#x27;analyse des expressions de variables.
 En général, la plupart de ce que Qiskit peut représenter dans son système d&#x27;expressions peut être
 exécuté sur du matériel de circuits dynamiques approprié, même si l&#x27;expression ne peut pas encore être analysée par
 Qiskit SDK. Consulte <a href="https://docs.quantum.ibm.com/api/qiskit/circuit_classical" target="_blank" rel="noopener noreferrer" class="">la documentation Qiskit du module <code>qiskit.circuit.classical</code>
@@ -97,16 +97,16 @@ le résultat de la concaténation de registres.</li>
 <ol start="6">
 <li class="">Qiskit SDK prend en charge les délais explicites via <code>QuantumCircuit.delay</code>, et les boîtes de circuit
 (<code>QuantumCircuit.box</code>) peuvent également avoir des durées explicites. Ces durées peuvent inclure des expressions classiques
-de variables <code>stretch</code>. Qiskit SDK (depuis juillet 2025, via <code>qiskit-qasm3-import</code>
+de variables <code>stretch</code>. Qiskit SDK (en date de juillet 2025, via <code>qiskit-qasm3-import</code>
 v0.6.0) ne prend pas en charge l&#x27;analyse des déclarations de type <code>duration</code> ou de type <code>stretch</code> depuis
-des fichiers OpenQASM 3. Le matériel dispose d&#x27;un support limité pour les durées incluant <code>stretch</code>.</li>
+des fichiers OpenQASM 3. Le matériel n&#x27;offre qu&#x27;une prise en charge limitée des durées incluant <code>stretch</code>.</li>
 </ol>
 <span id="7"></span>
 <ol start="7">
 <li class="">Les circuits doivent être transpilés vers l&#x27;ISA du backend pour s&#x27;exécuter sur le matériel IBM. Cela empêche
 les définitions de <code>gate</code> personnalisées et les constructions de niveau supérieur comme les modificateurs de portes (tels que <code>inv @</code>) d&#x27;être
 valides pour une exécution directe sur le matériel, mais le processus <code>transpile</code> les résout
-en circuits ISA valides. Qiskit SDK (depuis juillet 2025, via <code>qiskit-qasm3-import</code>
+en circuits ISA valides. Qiskit SDK (en date de juillet 2025, via <code>qiskit-qasm3-import</code>
 v0.6.0) évaluera immédiatement les modificateurs de portes lors de l&#x27;analyse, de sorte qu&#x27;ils ne seront pas
 visibles dans le <code>QuantumCircuit</code> résultant, potentiellement au détriment des performances à l&#x27;exécution.</li>
 </ol>

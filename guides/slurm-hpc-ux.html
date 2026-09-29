@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.46f92fcb.js" defer="defer"></script>
-<script src="/assets/js/main.c0f12266.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.aefb05ae.js" defer="defer"></script>
+<script src="/assets/js/main.104662ee.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/slurm-hpc-ux" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/slurm-hpc-ux" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -70,7 +70,7 @@ Par conséquent, les données sensibles peuvent être stockées dans des fichier
 Cela a plusieurs implications :</p>
 <ul>
 <li class="">
-<p>Le plugin Slurm est responsable de la multi-location (s&#x27;assurer que les utilisateurs ne voient pas les résultats des jobs des autres utilisateurs)</p>
+<p>Le plugin Slurm assure l&#x27;isolation multilocataire (multi-tenant) (s&#x27;assurer que les utilisateurs ne voient pas les résultats des jobs des autres utilisateurs)</p>
 </li>
 <li class="">
 <p>Le côté cluster HPC est responsable de la vérification des utilisateurs (qui est autorisé à accéder au QPU) et de la garantie d&#x27;un accès conforme</p>
@@ -92,7 +92,7 @@ En revanche, pendant l&#x27;exécution, les utilisateurs HPC peuvent spécifier 
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ibm-quantum-compute-service">IBM Quantum Compute Service<a href="#ibm-quantum-compute-service" class="hash-link" aria-label="Lien direct vers IBM Quantum Compute Service" title="Lien direct vers IBM Quantum Compute Service" translate="no">​</a></h4>
 <h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="user-scope-2">Périmètre utilisateur<a href="#user-scope-2" class="hash-link" aria-label="Lien direct vers Périmètre utilisateur" title="Lien direct vers Périmètre utilisateur" translate="no">​</a></h5>
-<p>Il est attendu que les utilisateurs spécifient des détails d&#x27;accès supplémentaires dans des variables d&#x27;environnement.
+<p>Les utilisateurs doivent indiquer des informations d&#x27;accès supplémentaires dans des variables d&#x27;environnement.
 Cela comprend notamment :</p>
 <ul>
 <li class="">
@@ -109,13 +109,13 @@ Cela comprend notamment :</p>
 </li>
 </ul>
 <p>Ces détails déterminent sous quel utilisateur et quelle instance de service IBM Quantum Compute Service est utilisé.
-Par conséquent, la planification sur IBM Quantum® Platform tient compte des capacités de l&#x27;utilisateur et de l&#x27;instance de service pour la planification.</p>
+Par conséquent, la planification d&#x27;IBM Quantum® Platform tient compte des capacités de l&#x27;utilisateur et de l&#x27;instance de service.</p>
 <p>Pour l&#x27;instant, les utilisateurs doivent fournir les détails ci-dessus (pas d&#x27;accès quantique partagé à l&#x27;échelle du cluster).</p>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="pasqal-cloud-services">Services Cloud Pasqal<a href="#pasqal-cloud-services" class="hash-link" aria-label="Lien direct vers Services Cloud Pasqal" title="Lien direct vers Services Cloud Pasqal" translate="no">​</a></h4>
 <h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="hpc-admin-scope">Périmètre admin HPC<a href="#hpc-admin-scope" class="hash-link" aria-label="Lien direct vers Périmètre admin HPC" title="Lien direct vers Périmètre admin HPC" translate="no">​</a></h5>
 <p>Aucune configuration spécifique n&#x27;est requise de la part des admins HPC pour l&#x27;utilisation de PCS.</p>
 <h5 class="anchor anchorTargetStickyNavbar_Vzrq" id="hpc-user-scope">Périmètre utilisateur HPC<a href="#hpc-user-scope" class="hash-link" aria-label="Lien direct vers Périmètre utilisateur HPC" title="Lien direct vers Périmètre utilisateur HPC" translate="no">​</a></h5>
-<p>Il est attendu que les utilisateurs spécifient des détails d&#x27;accès supplémentaires dans des variables d&#x27;environnement.
+<p>Les utilisateurs doivent indiquer des informations d&#x27;accès supplémentaires dans des variables d&#x27;environnement.
 Actuellement, cela comprend :</p>
 <ul>
 <li class="">
